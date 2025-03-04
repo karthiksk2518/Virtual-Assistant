@@ -1,8 +1,7 @@
-let apiKey = "AIzaSyBxKi8u0Cqf58vCCkwWx5zN_C1q8yVJ2wA";
-
 import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from "@google/generative-ai";
 
-// const apiKey = process.env.GEMINI_API_KEY;
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+console.log("api: ", apiKey);
 const genAI = new GoogleGenerativeAI(apiKey);
 
 const model = genAI.getGenerativeModel({
@@ -13,7 +12,7 @@ const generationConfig = {
     temperature: 1,
     topP: 0.95,
     topK: 40,
-    maxOutputTokens: 30,
+    maxOutputTokens: 100,
     responseMimeType: "text/plain",
 };
 
