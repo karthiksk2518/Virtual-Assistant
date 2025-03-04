@@ -1,0 +1,130 @@
+.main {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+  text-align: center;
+}
+
+#maya {
+  height: 60%;
+  max-width: 90%;
+  object-fit: contain;
+}
+
+span {
+  background: linear-gradient(to right, rgb(34, 221, 231), rgb(237, 4, 125));
+  font-size: 2.5vmax;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  text-align: center;
+  max-width: 90%;
+}
+
+button {
+  width: 180px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 20px;
+  border-radius: 25px;
+  border: none;
+  background-color: rgb(224, 79, 234);
+  box-shadow: 2px 2px 70px rgb(224, 79, 234);
+  cursor: pointer;
+}
+
+/* #speak {
+  width: 100px;
+} */
+
+#speak, #ai-voice {
+  width: 80px;
+  height: auto;
+}
+
+#ai-voice {
+  width: 40vmin;
+  max-width: 90%;
+}
+
+/* p {
+  font-size: 1.8vmax;
+  color: white;
+} */
+
+p {
+  font-size: clamp(14px, 2vmax, 22px);
+  color: white;
+  font-weight: bold;
+}
+
+.listening {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  #maya {
+    height: 40%;
+  }
+
+  span {
+    font-size: 1.8vmax;
+  }
+
+  button {
+    width: 160px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  #speak, #ai-voice {
+    width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    gap: 8px;
+  }
+
+  #maya {
+    height: 35%;
+  }
+
+  span {
+    font-size: 16px;
+  }
+
+  button {
+    width: 140px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  #speak, #ai-voice {
+    width: 50px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
